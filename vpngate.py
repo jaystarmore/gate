@@ -414,6 +414,7 @@ def build_outputs(results, raw_count, sstp_count, source):
         "available": available,
     }
     return data
+NODES_URL = os.environ.get("NODES_URL", "https:// jaystarmore.github.io/gate/nodes.txt")
 
 def build_nodes_text(data, edge_hosts):
     """
