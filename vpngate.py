@@ -81,17 +81,37 @@ COUNTRY_ZH = {
 }
 
 # 静态优选域名池
-EDGE_HOSTS = [
+EEDGE_HOSTS = [
     h.strip()
     for h in os.environ.get(
         "EDGE_HOSTS",
-        "download.yunzhongzhuan.com:443,www.udacity.com:443,www.wto.org:443,www.shopify.com:443,malaysia.com:443,cf.877774.xyz:443,ip.sb:443,"
-        "www.hugedomains.com:443,iplocation.io:443,www.iplocation.net:443,singapore.com:443,www.zsu.gov.ua:443,www.ipchicken.com:443,"
-        "www.glassdoor.com,www.digitalocean.com:443,cf.090227.xyz:443,www.visakorea.com:443,162.159.197.1:443,www.ntu.edu.sg:443,172.66.1.119:443",
+        # 主流优选域名
+        "engage.cloudflareclient.com:443,"
+        "spring.io:443,"
+        "www.shopify.com:443,"
+        "www.vmware.com:443,"
+        "uspto.gov:443,"
+        "cf.090227.xyz:443,"
+        # 你之前和刚提供的精选 IP
+        "172.66.1.119:443,"
+        "172.66.0.65:443,"
+        "104.17.153.127:443,"
+        "8.35.211.112:443,"
+        "172.66.1.115:443,"
+        "104.18.33.33:443,"
+        "172.66.175.194:443,"
+        "104.20.2.168:443,"
+        "8.219.111.175:443,"
+        "172.65.156.48:443,"
+        "47.251.52.53:443,"
+        "130.61.33.145:443,"
+        "130.61.178.201:443,"
+        "130.61.182.229:443,"
+        "47.88.100.87:443,"
+        "130.61.93.150:443",
     ).split(",")
     if h.strip()
 ]
-
 # 优选 API 地址配置 (支持逗号分隔多个，可配置在 GitHub Action Secret / Env 中)
 OPTIMAL_API = os.environ.get("OPTIMAL_API", "https://cf.090227.xyz/ct?ips=6&port=443")
 
